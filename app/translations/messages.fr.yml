@@ -1,0 +1,69 @@
+homepage:
+    titre: Publilingus
+    soustitre: On va révolutionner le monde de la critique littéraire
+    menu:
+        auteur: Auteur
+        auteur1: Auteur 1
+        auteur2: Auteur 2
+        auteur3: Auteur 3
+        auteur4: Auteur 4
+        edition: Maison d'édition
+        edition1: Maison d'édition 1
+        edition2: Maison d'édition 2
+        edition3: Maison d'édition 3
+        edition4: Maison d'édition 4
+        chrono: Chronologique
+        aleatoire: Aléatoire
+    footer:
+        contact: Contact
+    index:
+        titre1: Titre 1
+        texte1: Texte 1 blablabla Texte 1 blablabla Texte 1 blablabla<br />Texte 1 blablabla Texte 1 blablabla Texte 1 blablabla<br />Texte 1 blablabla Texte 1 blablabla Texte 1 blablabla<br />Texte 1 blablabla Texte 1 blablabla Texte 1 blablabla<br />Texte 1 blablabla Texte 1 blablabla.
+        titre2: Titre 2
+        texte2: Texte 2 blablabla Texte 2 blablabla Texte 2 blablabla<br />Texte 2 blablabla Texte 2 blablabla Texte 2 blablabla<br />Texte 2 blablabla Texte 2 blablabla Texte 2 blablabla<br />Texte 2 blablabla Texte 2 blablabla Texte 2 blablabla<br />Texte 2 blablabla Texte 2 blablabla.
+auteur:
+    titre: Tri par Auteur
+edition:
+    titre: Tri par Maison d'édition
+chrono:
+    titre: Tri par ordre Chronologique
+aleatoire:
+    titre: Aléatoire
+livre:
+    histoire: C'est l'histoire de ...
+    pense: Ce que j'en pense ...
+    culte: "Phrases cultes :"
+    bonus: "Bonus : Quand j'ai lu ce livre ..."
+
+
+livre1:
+    titre: Pygmy
+    auteur: Chuck Palahniuk
+    edition: Denoël
+    annee: 2010
+    image: pygmy.jpg
+    histoire: "Une bande d'ados sectaires, venus d'un mystérieux pays totalitaire, débarquent aux États-Unis pour un séjour linguistique. Sur fond d'échanges culturels, ils décryptent l'american way of life pour mieux infiltrer le pays et mettre en œuvre une action terroriste sans précédent, opération Dévastation."
+    pense: "Comme toujours, Palahniuk souffle le chaud et le froid, titillant les nerfs du lecteur jusqu'à la limite du supportable : de l'angoisse au burlesque, il n'y a qu'un pas qu'il franchit à grand renfort d'humour déjanté. Servis par un langage aussi malmené pour l'occasion que nos idées reçues, les rapports d'opérateur numéro 67, alias Pygmy, sont un délice du genre : s'y dessine une Amérique inculte, fermée sur elle-même, indolente et goinfre jusqu'à l'épuisement. Par contraste, la conviction de ces jeunes fanatiques, le caractère implacable de la haine qui les anime saisit le lecteur d'effroi."
+    culte: "Dans ce petit bijou d'indécence, Palahniuk poursuit le travail de dépeçage des fondements de la culture de masse américaine en mettant en scène ce grand cauchemar qui la tenaille, celui du terrorisme."
+    bonus: "Chuck Palahniuk est une star du roman américain contemporain : l'univers très noir et extrême de ses romans a fait de lui un auteur culte. Il vit dans l'Etat de Washington et se consacre à l'écriture. Après Choke et Le Festival de la couille, A l'estomac et Peste, Pygmy est le cinquième ouvrage de Palahniuk publié chez Denoël."
+livre2:
+    titre: Fight Club
+    auteur: Chuck Palahniuk
+    edition: Gallimard
+    annee: 1999
+    image: fightclub.jpg
+    histoire: "Laisse-moi te parler de Tyler. Tyler dit : les choses que tu possèdes finissent toujours par te posséder. C'est seulement après avoir tout perdu que tu es libre de faire ce dont tu as envie. Le fight club t'offre cette liberté."
+    pense: "Première règle du fight club : Tu ne parles pas du fight club.<br />Deuxième règle du fight club : Tu ne parles pas du fight club."
+    culte: "Tyler dit que chercher à s'améliorer, c'est rien que de la branlette. Tyler dit que l'autodestruction est sans doute la réponse."
+    bonus: "Métaphore acide et jubilatoire d'un monde au bord du chaos, perdu faute de révolution, Fight club a été porté à l'écran en 1999 par David Fincher, le réalisateur de Seven et Alien 3. Le DVD du film est édité par Fox Pathé Europa.<br /><br />Chuck Palahniuk, qui vit actuellement à Portland, est diplômé de l'université de l'Oregon. Son premier roman, Fight club, a fait l'effet d'une bombe à sa publication en 1996. Survivant et Monstres invisibles, tous deux disponibles aux Editions Gallimard, ont depuis confirmé l'originalité de son talent."
+livre3:
+    titre: Peste
+    auteur: Chuck Palahniuk
+    edition: Denoël
+    annee: 2008
+    image: peste.jpg
+    histoire: "Mais qui est donc Buster Casey, alias Rant ? Dans un futur où une partie de la population est « diurne » et l'autre « nocturne » selon un couvre-feu très strict, Peste prend la forme d'une biographie orale faite de rapports contradictoires émanant de témoins qui ont connu le mystérieux Buster de près ou de loin. Garçon aux mœurs étranges, friand de morsures animales en tous genres pour certains, génial tueur en série ou répugnant individu pour d'autres, le véritable Buster Casey semble, au fil des récits, de plus en plus insaisissable et protéiforme. De quoi alimenter le mythe..."
+    pense: "Dans ce roman, sorte d'éloge funèbre chanté par un chœur constitué d'amis, de voisins, de policiers, de médecins, de détracteurs et d'admirateurs, Chuck Palahniuk explore les tréfonds de la vie moderne et dresse le portrait en creux d'une Amérique en mal de repères. Evangile subversif et grotesque ou le rire donne la réplique à l'horreur, Peste décrit un monde qui marche sur la tête, où la vie est à mourir d'ennui et la mort positive et créatrice."
+    culte: "Chuck Palahniuk est une des figures majeures de la littérature américaine contemporaine : l'univers noir et extrême de ses romans, parfois portés à l'écran avec succès comme Fight Club ont fait de lui un auteur culte. Il vit dans l'Etat de Washington et se consacre à l'écriture. Après Choke, Le festival de la couille et A l'estomac, Peste est le quatrième ouvrage de Palahniuk publié chez Denoël."
+    bonus: "Chuck Palahniuk est une des figures majeures de la littérature américaine contemporaine : l'univers noir et extrême de ses romans, parfois portés à l'écran avec succès comme Fight Club ont fait de lui un auteur culte. Il vit dans l'Etat de Washington et se consacre à l'écriture. Après Choke, Le festival de la couille et A l'estomac, Peste est le quatrième ouvrage de Palahniuk publié chez Denoël."
+

@@ -1,0 +1,45 @@
+{% extends 'PublilingusPubliBundle::layout.html.twig' %}
+
+{% block title %}{% trans "homepage.titre" %} - {{ titre }}{% endblock %}
+
+{% block pageTitre %}
+    <div>
+        <h1>{{ titre }}</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2>{{ auteur }}</h2>
+        {{ edition }} - {{ annee }}<br>
+        <ul>
+            <li><a href="#histoire">{% trans 'livre.histoire' %}</a></li>
+            <li><a href="#pense">{% trans 'livre.pense' %}</a></li>
+            <li><a href="#culte">{% trans 'livre.culte' %}</a></li>
+            <li><a href="#bonus">{% trans 'livre.bonus' %}</a></li>
+        </ul>
+        <img src="{{ asset('common/images/cover/' ~ image) }}"/>
+        <p>
+            <a name="histoire"></a>
+            <h3>{% trans 'livre.histoire' %}</h3>
+            {{ histoire|raw }}
+        </p>
+        <p>
+            <a name="pense"></a>
+            <h3>{% trans 'livre.pense' %}</h3>
+            {{ pense|raw }}
+        </p>
+        <p>
+            <a name="culte"></a>
+            <h3>{% trans 'livre.culte' %}</h3>
+            {{ culte|raw }}
+        </p>
+        <p>
+            <a name="bonus"></a>
+            <h3>{% trans 'livre.bonus' %}</h3>
+            {{ bonus|raw }}
+        </p>
+    </div>
+{% endblock %}
+
+

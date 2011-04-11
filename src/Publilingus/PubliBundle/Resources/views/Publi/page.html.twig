@@ -1,0 +1,24 @@
+{% extends 'PublilingusPubliBundle::layout.html.twig' %}
+
+{% block title %}{% trans "homepage.titre" %} - {{ titre }}{% endblock %}
+
+{% block pageTitre %}
+    <div>
+        <h1>{{ titre }}</h1>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div>
+	<marquee width="50%" scrollAmount="10" direction="left" onmouseover="this.scrollAmount=5;" onmouseout="this.scrollAmount=10;">
+            {% for livre in livres %}
+                <a href="{{ livre.url }}">
+                    <h3>{{ livre.titre }}</h3> <h4>({{ livre.auteur }})</h4>
+                    <img src="{{ asset('common/images/cover/' ~ livre.image) }}"/>
+                </a>&nbsp;&nbsp;&nbsp;
+            {% endfor %}
+	</marquee>
+    </div>
+{% endblock %}
+
+

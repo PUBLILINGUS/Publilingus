@@ -1,0 +1,22 @@
+{% extends 'PublilingusPubliBundle::layout.html.twig' %}
+
+{% block title %}{% trans "homepage.titre" %}{% endblock %}
+
+{% block pageTitre %}{% trans 'homepage.soustitre' %}{% endblock %}
+
+{% block content %}
+    <div>
+        <h3>{% trans 'homepage.index.titre1' %}</h3>
+        <p>
+            {% trans 'homepage.index.texte1' %}
+        </p>
+    </div>
+    <div>
+        <h3>{% trans 'homepage.index.titre2' %}</h3>
+        <p>
+            {% trans 'homepage.index.texte2' %}
+        </p>
+    </div>
+{% endblock %}
+
+

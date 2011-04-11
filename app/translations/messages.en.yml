@@ -1,0 +1,69 @@
+homepage:
+    titre: Publilingus
+    soustitre: We will revolutionize the world of literary criticism
+    menu:
+        auteur: Author
+        auteur1: Author 1
+        auteur2: Author 2
+        auteur3: Author 3
+        auteur4: Author 4
+        edition: Publishing house
+        edition1: Publishing house 1
+        edition2: Publishing house 2
+        edition3: Publishing house 3
+        edition4: Publishing house 4
+        chrono: Chronological
+        aleatoire: Random
+    footer:
+        contact: Contact
+    index:
+        titre1: Title 1
+        texte1: Text 1 english Text 1 english Text 1 english<br />Text 1 english Text 1 english Text 1 english<br />Text 1 english Text 1 english Text 1 english<br />Text 1 english Text 1 english Text 1 english<br />Text 1 english Text 1 english.
+        titre2: Title 2
+        texte2: Text 2 english Text 2 english Text 2 english<br />Text 2 english Text 2 english Text 2 english<br />Text 2 english Text 2 english Text 2 english<br />Text 2 english Text 2 english Text 2 english<br />Text 2 english Text 2 english.
+auteur:
+    titre: Sort by Author
+edition:
+    titre: Sort by Publishing House
+chrono:
+    titre: Sort by Chronological
+aleatoire:
+    titre: Random
+livre:
+    histoire: This is the story of ...
+    pense: What i think about it ...
+    culte: "Catchphrase :"
+    bonus: "Bonus : While i was reading this book ..."
+
+
+
+livre1:
+    titre: Pygmy
+    auteur: Chuck Palahniuk
+    edition: Denoël
+    annee: 2010
+    image: pygmy.jpg
+    histoire: "A gang of teenagers sectarian, came from a mysterious totalitarian country, landed in the U.S. for a language course. Against a background of cultural exchange, they decipher the American way of life to better infiltrate the country and implement a terrorist unprecedented operation Devastation."
+    pense: "As usual, Palahniuk blows hot and cold, titillating the reader's nerves to the limit of endurance: the anguish of the burlesque, there is only that it crosses with a lot of humor crazy. Served by a language so battered the opportunity for our ideas, reports operator number 67, aka Pygmy, are a delight of its kind: it draws an uncultured American, closed in on itself, lazy glutton and up 'exhaustion. By contrast, the conviction of these young fanatics, the relentless nature of the hatred that drives the reader takes fright."
+    culte: "In this small jewel of indecency, Palahniuk continues the work of cutting up the foundations of American mass culture by staging this huge nightmare that the pincers, that of terrorism."
+    bonus: "Chuck Palahniuk is a star of contemporary American fiction: the world very black and extreme of his novels has made ​​him a cult author. He lives in Washington state and is dedicated to writing. After Choke and The Festival of the testicle, stomach and fever, Pygmy is the fifth book published Denoël Palahniuk."
+livre2:
+    titre: Fight Club
+    auteur: Chuck Palahniuk
+    edition: Gallimard
+    annee: 1999
+    image: fightclub.jpg
+    histoire: "Let me tell you about Tyler. Tyler says the things you own end up owning you always. Only after losing everything that you're free to do what you want. The fight club offers you this freedom."
+    pense: "First rule of fight club: You do not talk about Fight Club.<br />Second rule of fight club: You do not talk about Fight Club."
+    culte: "Tyler said that trying to improve, it's nothing but handjob. Tyler says self-destruction is probably the answer.<br /><br />Acid and jubilant metaphor of a world on the brink of chaos, lost for lack of revolution, Fight Club was filmed in 1999 by David Fincher, director of Seven and Alien 3. The DVD is edited by Fox Pathé Europa."
+    bonus: "Chuck Palahniuk, who now lives in Portland, graduated from the University of Oregon. His first novel, Fight Club, has been a bombshell for its publication in 1996. Survivor and Invisible Monsters, both available at Editions Gallimard, have since confirmed the originality of his talent."
+livre3:
+    titre: Peste
+    auteur: Chuck Palahniuk
+    edition: Denoël
+    annee: 2008
+    image: peste.jpg
+    histoire: "But who is Buster Casey, aka Rant? In a future where a portion of the population is \"daytime\"and one \"night\"according to a strict curfew, Death takes the form of an oral biography made ​​conflicting reports from witnesses who saw the mysterious Buster near and far. Boy with strange habits, fond of animal bites of all kinds for some funky serial killer or disgusting person for others, the real Buster Casey seems, over the stories, more elusive and protean. Enough to feed the myth ..."
+    pense: "In this novel, a sort of eulogy sung by a choir made ​​up of friends, neighbors, police, doctors, critics and admirers, Chuck Palahniuk explores the depths of modern life and portrays in hollow a lot of landmarks in America. Gospel subversive and grotesque laughter or co-starred with horror, Plague describes a world turned on its head, where life is dying of boredom and death positively and creatively."
+    culte: "Chuck Palahniuk is one of the major figures of contemporary American literature: the universe and black extreme of his novels, sometimes brought to the screen with hits like Fight Club have made ​​him a cult author. He lives in Washington state and is dedicated to writing. After Choke, The Festival of the testicle and stomach, fever is the fourth book published Denoël Palahniuk."
+    bonus: ""
