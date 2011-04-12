@@ -1,47 +1,73 @@
 security:
+    access_denied_url: /admin/dommage
+
+#    access_decision_manager:
+#        strategy: affirmative
+#        allow_if_all_abstain: false
+#        allow_if_equal_granted_denied: true
+
+#    always_authenticate_before_granting: false
+
+    # strategy can be: none, migrate, invalidate
+#    session_fixation_strategy: migrate
+
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+
+    providers:
+        memory:
+            name: memory
+            users:
+                flo: { password: pifpafpouf, roles: ROLE_USER }
+                marion: { password: tapette, roles: [ROLE_USER, ROLE_ADMIN] }
+
+    firewalls:
+        login:
+            pattern:  ^/admin/login$
+            security: false
+
+        admin:
+            pattern: /admin/*
+            access_denied_url: /admin/dommage
+            form_login:
+                check_path: /admin/login_check
+                login_path: /admin/login
+                use_forward: true
+#                always_use_default_target_path: false
+                default_target_path: /admin/dashboard
+#                target_path_parameter: _target_path
+#                use_referer: false
+                failure_path: /admin/login
+                failure_forward: true
+#                username_parameter: _username
+#                password_parameter: _password
+#                post_only: true
+                remember_me: true
+#            remember_me:
+#                key: Pu81i1i6u5Adm1n
+#                name: publilingusCookie
+#                lifetime: 3600 # in seconds
+#                path: /admin
+#                domain: publilingus.org
+#                secure: true
+#                httponly: true
+#                always_remember_me: false
+#                remember_me_parameter: _remember_me
+            logout:
+                path:   /admin/logout
+                target: /admin/login
+#                invalidate_session: true
+#                delete_cookies:
+#                    a: { path: null, domain: null }
+#                    b: { path: null, domain: null }
+#            anonymous: ~
+
+    access_control:
+        -
+            path: /admin/*
+            roles: [ROLE_USER, ROLE_ADMIN]
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
-    providers:
-        in_memory:
-            users:
-                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                admin: { password: tapette, roles: [ 'ROLE_ADMIN' ] }
-
-    firewalls:
-        profiler:
-            pattern:  ^/_profiler
-            security: false
-
-        wdt:
-            pattern:  ^/_wdt
-            security: false
-
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
-            logout:
-                path:   /demo/secured/logout
-                target: /demo/
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
-        admin:
-          pattern: .*
-    #      http_basic: true
-          form_login: true
-          anonymous: true
-
-    access_control:
-        #- { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
-        - { path: /admin/.*, role: ROLE_ADMIN }

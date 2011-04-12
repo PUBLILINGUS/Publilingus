@@ -5,8 +5,7 @@ namespace Publilingus\AdminBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\Security\Http;
-#use Symfony\Component\Security\SecurityContext;
+use Symfony\Component\Security\Core\SecurityContext;
 
 use Knplabs\MenuBundle\Menu;
 use Knplabs\MenuBundle\MenuItem;
@@ -23,25 +22,69 @@ class AdminController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:login.html.twig', array(
+            'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
+            'error'         => '',
             'menu'=>AdminController::makeMenu(),
         ));
     }
 
+    /**
+     * @extra:Route("/login", name="_admin_login")
+     * @extra:Template()
+     */
     public function loginAction()
     {
-       // get the error if any (works with forward and redirect -- see below)
-      if ($this->get('request')->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
-          $error = $this->get('request')->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
-      } else {
-          $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
-      }
+        if ($this->get('request')->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+            $error = $this->get('request')->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+        } else {
+            $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
+        }
 
-      return $this->render('PublilingusAdminBundle:Admin:login.html.twig', array(
-          // last username entered by the user
-          'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
-          'error' => $error,
-      ));
+        return array(
+            'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
+            'error'         => $error,
+            'menu'=>AdminController::makeMenu(),
+        );
+    }
+
+    /**
+     * @extra:Route("/login_check", name="_security_check")
+     */
+    public function securityCheckAction()
+    {
+        // The security layer will intercept this request
+    }
+
+    /**
+     * @extra:Route("/logout", name="_admin_logout")
+     */
+    public function logoutAction()
+    {
+        // The security layer will intercept this request
+    }
+
+
+    /**
+     * @extra:Route("/dommage", name="dommage")
+     * @extra:Template()
+     */
+    public function dommageAction()
+    {
+        return $this->render('PublilingusAdminBundle:Admin:dommage.html.twig');
+    }
+
+
+
+    /**
+     * @extra:Route("/dashboard", name="dashboard")
+     * @extra:Template()
+     */
+    public function dashboardAction()
+    {
+        return $this->render('PublilingusAdminBundle:Admin:dashboard.html.twig', array(
+            'menu'=>AdminController::makeMenu(),
+        ));
     }
 
     /**
@@ -50,7 +93,7 @@ class AdminController extends Controller
      */
     public function auteursAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:auteur.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -61,7 +104,7 @@ class AdminController extends Controller
      */
     public function editionsAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:edition.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -72,7 +115,7 @@ class AdminController extends Controller
      */
     public function livresAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:livre.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -83,7 +126,7 @@ class AdminController extends Controller
      */
     public function auteurAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:auteur.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -94,7 +137,7 @@ class AdminController extends Controller
      */
     public function editionAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:edition.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -105,7 +148,7 @@ class AdminController extends Controller
      */
     public function livreAction()
     {
-        return $this->render('PublilingusAdminBundle:Admin:index.html.twig', array(
+        return $this->render('PublilingusAdminBundle:Admin:livre.html.twig', array(
             'menu'=>AdminController::makeMenu(),
         ));
     }
@@ -121,7 +164,7 @@ class AdminController extends Controller
         $menu[$home]->setAttribute('id', 'menu_home' );
 
         $accueil = "Accueil Admin";
-        $menu->addChild($accueil, $this->generateUrl('admin'));
+        $menu->addChild($accueil, $this->generateUrl('dashboard'));
         $menu[$accueil]->setAttribute('class', 'menu_item');
 
         $auteur = "Auteur";
